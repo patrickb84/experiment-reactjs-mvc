@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Movie } from "../Models/Movie";
 
 const MovieController = () => {
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState([]); // this is the app UI state, needs to be as close as possible to DB state
 
   useEffect(() => {
     setMovies(Movie.selectAll());
@@ -34,10 +34,17 @@ const MovieController = () => {
     // go to route
   };
 
+  const handleImageUpload = (params) => {
+    //
+  };
+
   return {
     getIndex,
     getDetails,
     handleUpdate,
     handleDelete,
+    handleImageUpload,
   };
 };
+
+export default MovieController;

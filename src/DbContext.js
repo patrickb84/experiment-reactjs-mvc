@@ -1,7 +1,6 @@
-import Movie from './Models/Movie'
+var DbContext = {
+  movies: [],
+  movieIdx: 0,
+};
 
-const DATA = {
-    movies = [],
-}
-
-export default DATA;
+exports.DbContext = DbContext;
